@@ -65,9 +65,16 @@ body {
 
 
 
-header img {
-    width: 25%;
+
+header {
+    padding: 3vw 5vw;
+    border-bottom: 1px solid #cccccc;
 }
+
+    header div.logo-circle img {
+        width: 20%;
+
+    }
 
 header nav ul {
     font-size: 1rem;
@@ -84,24 +91,16 @@ header nav ul li a.ativo {
     font-weight: 800;
 
 }
-
-header {
-    padding: 3vw 5vw;
-    border-bottom: 1px solid #cccccc;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
 }
-
 
 .sino img {
     width: 10%;
 }
 
-.avatar img {
-    width: 10%;
-}
-
-.comeco {
-    padding: 10px;
-}
 
 main section.comeco {
 
@@ -112,10 +111,12 @@ main section.comeco {
 section.comeco img {
     width: fit-content;
     margin-top: 2vw;
+    border-radius: 5vw;
+    max-width: 90vw;
 }
 
 section.comeco h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     padding: 0 0 5px 0;
 }
 
@@ -125,7 +126,7 @@ section.comeco h2 span {
 
 section.comeco p {
     padding: 2vw 0vw 8vw 0;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 section.comeco div.texto {
@@ -135,53 +136,71 @@ section.comeco div.texto {
 
 
 section.diferenciais h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 6vw;
+    
 }
 
 section.diferenciais h3 span {
     font-weight: 600;
+    
 }
 
 section.diferenciais ul li img {
-    max-width: 30%;
+    
     display: block;
     margin: 0 auto;
-    align-items: center;
+     width: 56%;            
+  height: auto;
+ max-width: 15vw;
+    max-height: 15vw;
 }
 
 section.diferenciais ul li {
     font-weight: 600;
-    font-size: 1.2rem;
-    padding: 10vw 0vw 0vw 4vw;
+    font-size: 0.8rem;
+    padding: 1vw 0vw 0vw 4vw;
 }
+
 
 section.diferenciais ul {
     position: relative;
     bottom: 5vw;
+     display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Força 2 colunas iguais */
+  gap: 10vw;
 }
 
 section.diferenciais h4 {
     font-weight: 700;
     padding-bottom: 3vw;
 }
+section.beneficios {
+      background: linear-gradient(#9bb8df 0%,
+                #C9D4FF 100%);
+        border-radius: 6%;
+        margin-top: 10vw;
+        
+    
+}
 
 .item {
     display: flex;
-    padding: 3vw 2vw 0vw 4vw;
+    padding: 7vw 2vw 0vw 4vw;
     position: relative;
     bottom: 3.7vw;
+    left: 13vw;
 }
 
 section.beneficios .texto {
     max-width: 200px;
-    font-size: 1.1rem;
-    
+    font-size: 0.8rem
 }
 
 section.beneficios h2 {
     font-weight: 500;
     font-size: 1.8rem;
+    padding: 0vw 0vw 0vw 3vw;
 
 }
 
@@ -189,15 +208,15 @@ section.beneficios h2 {
 
 .numero {
     margin: 0vw 2vw;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #ffffff;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
     font-size: 1.1rem;
     position: relative;
-    padding: 11.5px;
+    padding: 5px;
 
 }
 
@@ -206,18 +225,26 @@ section.beneficios div.imagem img {
 }
 
 section.beneficios div.direitatexto {
-    margin-top: 10vw;
-    font-size: 1.1rem;
+    margin-top: 5vw;
+    margin-bottom: 8vw;
+    padding: 0vw 0vw 0vw 3vw;
 }
+section.beneficios div.direitatexto p {
+    font-size: 0.8rem;
+    margin: 3vw 1vw 0vw 1vw;
+    padding: 0vw 0vw 2vw 17vw;
+    max-width: 80%;
 
-.recurso {
-    padding: 30px 0 0 0;
+}
+.recursos {
+    padding: 15px 0 0 0;
+    text-align: center;
 }
 
 
 section.recursos img {
-    max-width: 50vw;
-    max-height: 50vw;
+    max-width: 40vw;
+    max-height: 40vw;
     border-radius: 2vw;
 }
 
@@ -225,7 +252,6 @@ section.recursos img {
 
 section.recursos ul li a {
     text-align: center;
-    margin-left: 6.67vw;
     margin-top: 1vw;
     margin-bottom: 2vw;
     background-color: #4988c4;
@@ -234,9 +260,22 @@ section.recursos ul li a {
     display: inline-block;
     border-radius: 4vw
 }
+section.recursos ul li {
+    margin-top: 15vw;
+}
+section.recursos ul li {
+    display: flex;
+}
 
 section.recursos {
     padding-bottom: 3vw;
+}
+section.recursos p {
+    font-size: 0.8rem;
+    margin: 0vw 2vw 0vw 2vw;
+}
+section.recursos h3 {
+    font-size: 1.5rem;
 }
 
 
@@ -380,66 +419,52 @@ section.recursos {
 
     /* ===== header ===== */
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 3vw 5vw 3vw 5vw;
-        border-bottom: 1px solid #cccccc;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 5vw 3vw 5vw;
+  border-bottom: 1px solid #cccccc;
+}
 
-    img.logo-circle {
-        width: 50%;
-    }
+ header div.logo-circle img{
+  width: 3.5rem;
+  border-radius: 50%;
+}
 
-    img.logo-circle-fim {
-        width: 3.5rem;
-        border-radius: 50%;
-        background-color: var(--azul);
-    }
+header nav ul {
+  display: flex;
+  gap: 2vw;
+  font-size: 0.9rem;
+}
 
-    header nav ul {
-        display: flex;
-        gap: 2vw;
-        font-size: 0.9rem;
-    }
+header nav ul li a {
+  color: var(--texto-principal);
+  font-weight: 500;
+}
 
-    header nav ul li a {
-        color: var(--texto-principal);
-        font-weight: 500;
-    }
+header nav ul li a.ativo {
+  color: #4988C4;
+  font-weight: 700;
+}
 
-    header nav ul li a.ativo {
-        color: #4988C4;
-        font-weight: 700;
-    }
+.header-icones {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 3vw 5vw;
-        border-bottom: 1px solid #cccccc;
-    }
+.sino img {
+  width: 27px;
+  height: auto;
+}
 
-    .header-icones {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .sino img {
-        width: 1.8rem;
-        height: auto;
-    }
-
-    .header-icones .avatar {
-        width: 1.8rem;
-        height: 1.8rem;
-        border-radius: 50%;
-        background-color: #d9d9d9;
-        display: inline-block;
-    }
-
+.header-icones .avatar {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  display: inline-block;
+}
     main section.comeco {
         display: flex;
         background-color: #E6E5E5;
@@ -448,11 +473,14 @@ section.recursos {
     section.comeco img {
         width: fit-content;
         margin-top: 2vw;
+        max-width: 60%;
+        padding: 0vw;
+        margin-left: 5vw;
     }
 
     section.comeco h2 {
         font-size: 2.5rem;
-        padding: 5vw 0 0 5vw;
+        padding: 2vw 0 0 5vw;
     }
 
     section.comeco h2 span {
@@ -460,12 +488,17 @@ section.recursos {
     }
 
     section.comeco p {
-        padding: 5vw 0vw 0vw 5vw;
-        font-size: 1.4rem;
+        padding: 2vw 0vw 0vw 5vw;
+        font-size: 1rem;
     }
 
     section.comeco div.texto {
         margin-right: 3vw;
+    }
+    section.diferenciais {
+        padding: 0vw 0vw 0vw 0vw ;
+        margin-bottom: 0vw;
+        margin-top: 0vw;
     }
 
     section.diferenciais h3 {
@@ -479,18 +512,14 @@ section.recursos {
     }
 
     section.diferenciais ul li img {
-        max-width: 50%;
-        padding: 0 0px 0 0;
+        width: 80%;
+        padding: 0vw 5vw 0vw 0vw
     }
 
     section.diferenciais ul li {
         font-weight: 600;
         font-size: 1.2rem;
-    }
-
-    section.diferenciais ul li {
-
-        padding: 1vw 0vw 0vw 4vw;
+        padding: 1vw 0vw 0vw 0vw;
     }
 
     section.diferenciais ul {
@@ -498,8 +527,23 @@ section.recursos {
         position: relative;
         bottom: 5vw;
         left: 1vw;
+        align-items: center;
+         grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+        
     }
-
+    section.diferenciais ul li.relogio h4{
+        position: relative;
+        bottom: 15px;
+    }
+    section.diferenciais ul li.relogio img {
+        position: relative;
+        bottom: 15px;
+    }
+     section.diferenciais ul li.relogio p {
+        position: relative;
+        bottom: 15px;
+     }
     section.diferenciais h4 {
         font-weight: 700;
         padding-bottom: 3vw;
@@ -509,11 +553,15 @@ section.recursos {
         max-width: 250px;
     }
 
+    
     .item {
         display: flex;
-        padding: 3vw 2vw 0vw 4vw;
+        padding: 3vw 0vw 0vw 0vw;
         position: relative;
         bottom: 3.7vw;
+        left: 2vw;
+        max-height: 6vw;
+        margin-top: 2vw;
     }
 
     section.beneficios .texto {
@@ -534,13 +582,17 @@ section.recursos {
         position: relative;
 
     }
+    section.beneficios div.imagem img {
+    display: block;
+}
 
     section.beneficios h2 {
         font-weight: 700;
-        font-size: 3rem;
-        padding: 1vw 0vw 1vw 10vw;
+        font-size: 2.5rem;
+        padding: 1vw 0vw 1vw 2vw;
         position: relative;
         bottom: 1vw;
+        left: 2vw;
     }
 
     section.beneficios {
@@ -550,43 +602,64 @@ section.recursos {
         padding-bottom: 1vw;
         ;
         max-height: 40vw;
-        padding-left: 10vw;
+
     }
 
     section.beneficios {
         display: flex;
+        margin-top: 0vw;
     }
 
     section.beneficios div.imagem img {
-        max-width: 28vw;
+        max-width: 26vw;
         position: relative;
-        bottom: 2vw;
+        top: 1vw;
+        margin: 0vw;
+        padding: 0vw;
     }
 
     section.beneficios div.direitatexto {
         margin-top: 10vw;
         font-size: 1.1rem;
     }
+    section.beneficios div.direitatexto p {
+        max-width: fit-content;
+        margin: 0vw;
+        padding: 0vw;
+        font-size: 1rem;
+         max-width: 180px;
+    }
 
     section.beneficios div.direitatexto h5 {
         font-size: 2rem;
     }
-
-    section.beneficios div.direitatexto p {
-        max-width: 180px;
-    }
-
+ section.beneficios div.direitatexto {
+    margin-right: 1vw;
+ }
     section.recursos ul {
         display: flex;
+        gap: 1vw;
         justify-content: space-evenly
+        
     }
+    section.recursos ul li a { text-align: center;
+         margin-right: 6.67vw; 
+         margin-top: 1vw; 
+         margin-bottom: 2vw;
+          background-color: #4988c4; 
+          color: white; 
+          padding: 0.5vw 2vw 0.5vw 2vw; 
+          display: inline-block;
+           border-radius: 4vw }
 
     section.recursos img {
-        max-width: 20vw;
-        max-height: 20vw;
+        max-width: 18vw;
+        max-height: 18vw;
         border-radius: 2vw;
     }
-
+    section.recursos ul li {
+        display: block;
+    }
     section.recursos h3 {
         text-align: center;
         font-size: 1.4rem;
@@ -604,7 +677,11 @@ section.recursos {
 
     section.recursos ul li p {
         max-width: 20vw;
-        padding-left: 3vw;
+        margin: 0vw;
+    }
+    section.recursos ul li{
+        padding-top: 2vw;
+        margin-top: 2vw;
     }
 
     section.recursos ul li a {
@@ -618,78 +695,72 @@ section.recursos {
         display: inline-block;
         border-radius: 4vw
     }
+    section.recursos ul li.homem a {
+        margin: 1vw;
+    }
 
     section.recursos {
         padding-bottom: 3vw;
     }
-
-    footer {
-        background-color: #1c4d8d;
-        color: #ffffff;
-        padding: 2rem 5%;
-        margin-top: 3rem;
+    section.recursos h3 {
+        padding: 0vw;
+        margin: 0vw;
     }
+footer {
+  background-color: #1C4D8D;
+  color: #ffffff;
+  padding: 2rem 5%;
+  margin-top: 3.5rem;
+}
 
-    .footer-container {
-        max-width: 900px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
-    .logo-circle-footer {
-        width: 60px;
-        height: 60px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        text-align: center;
-    }
+.footer-container .logo-circle {
+  width: 120px;
+  height: auto;
+  border-radius: 0%;
+}
 
-    .logo-circle-footer img {
-        width: 40px;
-        margin-top: 10px;
-    }
+.footer-container .logo-circle img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-    .footer-links {
-        display: flex;
-        gap: 1rem;
-    }
 
-    .footer-links a {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 0.85rem;
-    }
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
 
-    .footer-copy p {
-        margin: 0;
-        font-size: 0.75rem;
-        opacity: 0.8;
-        font-weight: 700;
-    }
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
 
-    .footer-redes {
-        display: flex;
-        gap: 0.8rem;
-    }
+.footer-copy p {
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  font-weight: 700;
+}
 
-    .footer-redes img {
-        width: 20px;
-        height: 40px;
-    }
+.footer-redes {
+  display: flex;
+  gap: 0.8rem;
+}
 
-    footer div.logo-circle img {
-        max-width: 40px;
-    }
+.footer-redes img {
+  width: 20px;
 
-    section.beneficios div.imagem img {
-        display: block;
-    }
-
-        span.avatar img{
-        width: 30px;
-    }
+}
 }
